@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Box, CircularProgress, Grid } from '@mui/material'
 import axios from 'axios'
 import { POKEMON_API_URL, IMAGE_API_URL } from '../config';
+import PokemonCard from '../components/PokemonCard';
 
 const h1Style = {
   background: 'red',
@@ -33,10 +34,11 @@ export default function Pokedex() {
     <Box>
     {PokemonData ? (
       <Grid container spacing={2}>
-        {PokemonData.map((pokemon) =>{
-          return <h1 style= {{marginLeft: 10}}>{pokemon.name}</h1>
-        })}
-      </Grid>
+  {PokemonData.map((pokemon) => (
+    <PokemonCard key={pokemon.id} pokemon={pokemon} image={pokemon.url} />
+  ))}
+</Grid>
+
     ) : (
      <CircularProgress style={{marginTop:200}}/>
      )}
