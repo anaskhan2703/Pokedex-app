@@ -6,7 +6,7 @@ import PokeballIcon from './pokeball.svg';
 const appBarStyle = {
     background: 'black',
     position: 'fixed',
-    variant: 'h6',
+    
 };
 const LinkStyle ={
     textDecoration: 'none',
@@ -14,9 +14,9 @@ const LinkStyle ={
 const titleStyle ={
     cursor: 'pointer',
     color: 'white',
+    variant: 'h6',
 }
 const pokeballStyle={
-
 }
 
 export default function AppNav() {

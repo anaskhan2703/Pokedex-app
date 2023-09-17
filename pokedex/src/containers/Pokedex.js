@@ -4,9 +4,12 @@ import axios from 'axios'
 import { POKEMON_API_URL, IMAGE_API_URL } from '../config';
 import PokemonCard from '../components/PokemonCard';
 
+const gridStyle = {
+  textAlign: 'center',
+  padding: '80px 10px 0px 10 px',
+}
 const h1Style = {
   background: 'red',
-  margin: 500,
 };
 
 export default function Pokedex() {
@@ -30,10 +33,14 @@ export default function Pokedex() {
     })
   }, [])
   return (
-    
+
     <Box>
     {PokemonData ? (
-      <Grid container spacing={2}>
+      <Grid style={{
+        textAlign: 'center',
+        padding: '70px 10px 0px 10px',
+        backgroundColor: 'rgb(128,133,160)',
+      }} container spacing={2}>
   {PokemonData.map((pokemon) => (
     <PokemonCard key={pokemon.id} pokemon={pokemon} image={pokemon.url} />
   ))}
