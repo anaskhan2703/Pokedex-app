@@ -4,14 +4,6 @@ import axios from 'axios'
 import { POKEMON_API_URL, IMAGE_API_URL } from '../config';
 import PokemonCard from '../components/PokemonCard';
 
-const gridStyle = {
-  textAlign: 'center',
-  padding: '80px 10px 0px 10 px',
-}
-const h1Style = {
-  background: 'red',
-};
-
 export default function Pokedex() {
   const [PokemonData, setPokemonData] = useState(null)
   useEffect(() => {
